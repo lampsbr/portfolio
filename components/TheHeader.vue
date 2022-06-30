@@ -1,9 +1,19 @@
 <template>
     <menu>
-        <li><img src="/imgs/square-logo-250.png" alt="Bruno Lamps' portfolio" /></li>
-        <li>title</li>
-        <li>Apps</li>
-        <li>Contact</li>
+        <li>
+            <NuxtLink to="/">
+                <picture>
+                    <source srcset="/imgs/logo-200w.png" media="(min-width: 576px)" width="200" height="80" />
+                    <img src="/imgs/logo-100w.png" alt="Bruno Lamps' portfolio" width="100" height="40" />
+                </picture>
+            </NuxtLink>
+        </li>
+        <li>
+            <NuxtLink to="/apps">Apps</NuxtLink>
+        </li>
+        <li>
+            <NuxtLink to="/contact">Contact</NuxtLink>
+        </li>
     </menu>
 </template>
 <style scoped>

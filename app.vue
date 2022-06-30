@@ -4,7 +4,11 @@
     <NuxtPage />
   </div>
 </template>
-<style scoped>
+<style>
+body{
+  margin: 0;
+}
+
 div.main {
   display: flex;
   flex-direction: column;
