@@ -8,10 +8,12 @@ export default function TheHeader(props: any) {
     <menu className={styles.mainmenu}>
       <li className={styles.liLogo}>
         <Link href="/" >
-          <Image src="/imgs/logo-200w.png" alt="Bruno Lamps' Portfolio" layout="fill" />
+          <a>
+            <Image src="/imgs/logo-200w.png" alt="Bruno Lamps' Portfolio" layout="fill" />
+          </a>
         </Link>
       </li>
-      <li style={{textAlign: "center"}}>
+      <li style={{ textAlign: "center" }}>
         <Link href="/apps">Apps</Link>
       </li>
       <li>
