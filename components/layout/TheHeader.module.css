@@ -1,0 +1,29 @@
+.mainmenu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-evenly;
+  background: gray;
+  border-radius: 0 0 1rem 1rem;
+  margin-top: 0;
+}
+.mainmenu li {
+  text-align: center;
+}
+
+.liLogo {
+  position: relative;
+  width: 12%;
+}
+@media screen and (orientation: landscape) {
+  .mainmenu {
+      flex-direction: column;
+      border-radius: 0 1rem 1rem 0;
+      height: 100vh;
+  }
+  .liLogo {
+    width: 10rem;
+    height: 4rem;
+  }
+
+}

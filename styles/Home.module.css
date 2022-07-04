@@ -1,5 +1,6 @@
 .container {
-  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
@@ -112,5 +113,11 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .container {
+    flex-direction: row;
   }
 }
