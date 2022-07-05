@@ -19,6 +19,9 @@ export default function TheHeader(props: any) {
       <li>
         <Link href="/contact">Contact</Link>
       </li>
+      <li>
+        <Link href="/credits">Credits</Link>
+      </li>
     </menu >
   )
 }
