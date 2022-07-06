@@ -1,11 +1,16 @@
 import { useState } from "react"
 import { Toast, ToastContainer } from "react-bootstrap";
 
+type MailErrors = {
+  email?: boolean,
+  msg?: boolean
+}
+
 export default function Contact() {
   const [fullname, setFullname] = useState("")
   const [email, setEmail] = useState("")
   const [msg, setMsg] = useState("")
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<MailErrors>({});
   const [buttonText, setButtonText] = useState("Send");
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -19,10 +24,6 @@ export default function Contact() {
     let tempErrors: any = {}
     let isValid = true
 
-    if (fullname.length <= 0) {
-      tempErrors["fullname"] = true
-      isValid = false
-    }
     if (email.length <= 0) {
       tempErrors["email"] = true
       isValid = false
@@ -67,6 +68,8 @@ export default function Contact() {
       setFullname('')
       setEmail('')
       setMsg('')
+    } else {
+      console.error(errors)
     }
     //console.log(fullname, email, msg)
   }
@@ -83,10 +86,12 @@ export default function Contact() {
         <div className="mb-3">
           <label htmlFor="email" className="form-label">E-mail *</label>
           <input type="email" name="email" className="form-control" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+          {errors.email && <div className="form-text text-white w-75">E-mail field is mandatory =)</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="message" className="form-label">Message *</label>
           <textarea name="message" className="form-control" value={msg} onChange={(e) => { setMsg(e.target.value) }}></textarea>
+          {errors.msg && <div className="form-text text-white">Please say hi! I like when people say hi</div>}
         </div>
         <button className="btn btn-light text-secondary float-end">{buttonText}</button>
       </form>
