@@ -9,8 +9,8 @@ type Data = {
 
 async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
   try{
-    console.log("REQ.BODY", req.body)
-    const response = await sendgrid.send({
+    //console.log("REQ.BODY", req.body)
+    await sendgrid.send({
       to: "lamparolho@gmail.com",
       from: "lamparolho@gmail.com",
       subject: "mail from portfolio page",
@@ -34,7 +34,6 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse<Data>) {
       <p>Message: ${req.body.msg}</p>
       `,
     })
-    console.log(response)
   } catch (err: any) {
     console.log(err)
     return res.status(err.statusCode || 500).json({error: err.message})
