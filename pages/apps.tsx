@@ -1,21 +1,19 @@
 import { Carousel } from "react-bootstrap";
+import styles from '../styles/Apps.module.css'
 
 //TODO:
-//- width: 100vw and height 70vh for mobile
+//- fix vertical image centering
 //- discover good values for landscape
-//- these values should go do div.carousel.slide.carousel-dark
-//- force div.carousel-caption to bottom of grandfather, might need to change div.carousel-inner and div.carousel-item sizes.
-//- decent title
 //- add neogelk
 //- add Portal do Jurisdicionado
 //- add this portfolio (NEXTjs)
 export default function Apps() {
-  return (<>
-    <p>apps page</p>
+  return (<section className={styles.section}>
+    <h1 className="text-center">Apps</h1>
     <Carousel variant="dark" interval={10000}>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="img-fluid"
           src="/imgs/numeroum-main.png"
           alt="Número Um"
         />
@@ -26,7 +24,7 @@ export default function Apps() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-75"
+          className="img-fluid mx-auto"
           src="/imgs/numeroum-detail1.png"
           alt="Número Um"
         />
@@ -38,7 +36,7 @@ export default function Apps() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="img-fluid"
           src="/imgs/msltracker-main.png"
           alt="MSL Tracker"
         />
@@ -49,5 +47,5 @@ export default function Apps() {
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  </>);
+  </section>);
 }
