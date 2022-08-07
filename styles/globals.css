@@ -20,6 +20,17 @@ a {
   border-radius: 1rem;
 }
 
+.carousel-dark .carousel-indicators button{
+  background-color: white;
+}
+.carousel-dark .carousel-caption {
+  color: white;
+}
+.carousel-caption {
+  background-color: rgba(1, 1, 1, 0.7);
+  border-radius: 5px;
+}
+
 /* these control the apps carousel*/
 div.carousel.slide.carousel-dark {
   width: 100vw;
