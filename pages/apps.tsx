@@ -2,8 +2,6 @@ import { Carousel } from "react-bootstrap";
 import styles from '../styles/Apps.module.css'
 
 //TODO:
-//- fix vertical image centering
-//- discover good values for landscape
 //- add neogelk
 //- add Portal do Jurisdicionado
 //- add this portfolio (NEXTjs)
@@ -24,7 +22,7 @@ export default function Apps() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="img-fluid mx-auto"
+          className="d-block mx-auto mh-100 mw-100"
           src="/imgs/numeroum-detail1.png"
           alt="Número Um"
         />
